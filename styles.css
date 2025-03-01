@@ -230,25 +230,8 @@ body::before {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     main {
-        grid-template-columns: 1fr;  /* Change to single column */
+        grid-template-columns: 1fr;
         padding: 1rem;
-    }
-
-    .menu-toggle {
-        display: block;
-        text-align: right;
-        margin-bottom: 1rem;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    nav ul.active {
-        display: flex;
     }
 
     .menu-items {
@@ -258,39 +241,58 @@ body::before {
     }
 
     .menu-items li {
+        background: white;
+        color: #333;
         padding: 1.2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin: 0.5rem 0;
+    }
+
+    .menu-items li:hover {
+        transform: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        background: white;
     }
 
     .item {
-        margin-bottom: 0.5rem;
-        font-size: 1.2rem;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        color: #333;
     }
 
     .price, .price-options {
         float: none;
+        color: #333;
+        font-weight: bold;
         margin-top: 0.5rem;
-        font-size: 1.1rem;
     }
 
     .menu-section {
-        padding: 1.5rem;
-        margin: 1rem;
-        width: auto;
+        background: #f5f6fa;
+        padding: 1rem;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        backdrop-filter: none;
     }
 
-    h2 {
-        margin: 1.5rem 0;
+    /* Add category labels */
+    .category-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #666;
+        margin-bottom: 0.3rem;
     }
 
-    h3 {
-        margin: 1rem 0;
+    /* Add description style */
+    .item-description {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.3rem;
     }
 }
 
